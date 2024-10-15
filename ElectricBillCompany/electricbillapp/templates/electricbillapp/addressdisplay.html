@@ -1,0 +1,16 @@
+{% extends "electricbillapp/backend/backendbase.html" %}
+{% block title %}
+Address Display
+{% endblock %}
+{% block content %}
+<br>
+<h3>Address Display</h3>
+<hr>
+
+{% for i in bill_all %}
+Address : {{ i.address }}<br>
+Primary Key : {{ i.pk }}
+<hr>
+{% endfor %}
+
+{% endblock %}

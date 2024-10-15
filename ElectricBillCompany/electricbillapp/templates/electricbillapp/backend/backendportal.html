@@ -1,0 +1,18 @@
+{% extends "electricbillapp/basetemplate.html" %}
+{% load static %}
+{% block title %}
+Back End Portal
+{% endblock %}
+{% block content %}
+<br>
+<h2 style="text-align: center;">Welcome to the Back End Portal</h2>
+<p style="text-align : center;">Everything done her is monitered and saved so unless you have business in this page it is advised to exit ASAP</p>
+<br>
+
+<form method="post" action="{% url 'backendportalextended' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+</form>
+<br><br><br><br><br><br><br><br><br>
+{% endblock %}

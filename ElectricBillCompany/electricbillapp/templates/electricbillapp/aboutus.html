@@ -1,0 +1,50 @@
+{% extends "electricbillapp/basetemplate.html" %}
+
+{% block title %}
+About Us
+{% endblock %}
+{% block content %}
+<br>
+<h2 style="text-align : center;">About Us</h2>
+<br>
+<div class="accordion" id="accordionExample" style="margin-right: 20px; margin-left: 20px;">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Who are we?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>We are Electric Billing, here to revolutionize electricity in the GTA.</strong> We first started in 1990 in Dubai as a small electricians shop who would fix wires for people, as we continued to grow we branched to the new an upcoming technology which is Wifi and the internet. In 2012 we moved to Canada and ever since then we've taken over the market with our revolutionary technology and services. Owned by Josh Mathur and funded by a third party source, we make sure that every single on of our customers are properly dealt with and handled with professional, caring hands.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        What services do we provide?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>We provide everything you would need and more.</strong> We give many services to all of our customers, some include providing electricity to power everything that works inside of your house, the plumbing, internet, etc. If you want a more indepth report on what we do feel free to call us, more details about how to contact us can be found <a href="{% url 'contactus' %}">here</a>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Our Mission
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Here at Electric Billing our mission is to make paying electric bills easier for everyone,</strong> with our cutting technology of being able to register your own house with only a few clicks of a button and then us supplying you monthly electric bills, we are helping people all around the GTA as COVID 19 continues to make paying bills difficult for people.
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+
+{% endblock %}

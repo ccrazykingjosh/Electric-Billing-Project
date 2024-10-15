@@ -1,0 +1,70 @@
+{% extends "electricbillapp/basetemplate.html" %}
+{% load static %}
+{% block title %}
+Contact Us
+{% endblock %}
+{% block content %}
+<br>
+<h3 style="text-align : center;">Come Talk to Us!</h3>
+<br>
+<div class="container" style="text-align:center;">
+  <div class="row">
+    <div class="col">
+        <br>
+        <img src="{% static 'electricbillapp/phone.png' %}" style="width:10%"><br><br>
+        <h6>Call us!</h6>
+        +1 905 028 8391
+    </div>
+    <div class="col">
+      <img src="{% static 'electricbillapp/walkingman.jpg' %}" style="width:24%"><br>
+        <h6>Visit our HQ!</h6>
+        167 Hurontario Drive
+    </div>
+    <div class="col">
+      <img src="{% static 'electricbillapp/fax.png' %}" style="width:17%"><br><br>
+        <h6>Fax Us!</h6>
+        287 849 9192
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<h3 style="text-align : center;">Our Socials</h3>
+<br>
+<div class="container" style="text-align:center;">
+  <div class="row">
+    <div class="col">
+        <br>
+        <img src="{% static 'electricbillapp/instagram.png' %}" style="width:10%"><br><br>
+        <h6>Instagram</h6>
+        <a href="https://www.instagram.com/electricbillling/" target="_blank">Click Here!</a>
+    </div>
+    <div class="col">
+      <img src="{% static 'electricbillapp/facebook.png' %}" style="width:24%"><br>
+        <h6>Facebook</h6>
+        <a href="https://www.facebook.com/ElectricBilling" target="_blank">Click Here!</a>
+    </div>
+    <div class="col">
+      <img src="{% static 'electricbillapp/twitter.png' %}" style="width:17%"><br><br>
+        <h6>Twitter</h6>
+        <a href="https://twitter.com/electricbilling" target="_blank">Click Here!</a>
+    </div>
+  </div>
+</div>
+<hr>
+<br>
+<div style="text-align: center;">
+<h3> Any inquiries?</h3>
+<h5>Use this form to reach us directly from your house!</h5>
+</div>
+<br>
+<div style="text-align:center; background: rgb(186,189,158);
+background: linear-gradient(360deg, rgba(186,189,158,0.7794468129048494) 35%, rgba(0,155,255,0) 100%);" >
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+</form>
+</div>
+
+{% endblock %}

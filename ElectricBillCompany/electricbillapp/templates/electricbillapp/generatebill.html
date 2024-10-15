@@ -1,0 +1,12 @@
+{% extends "electricbillapp/backend/backendbase.html" %}
+{% block title %}
+Generate Bill
+{% endblock %}
+{% block content %}
+<br>
+<form method="post" action="{% url 'generatebilldisplay' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+</form>
+{% endblock %}

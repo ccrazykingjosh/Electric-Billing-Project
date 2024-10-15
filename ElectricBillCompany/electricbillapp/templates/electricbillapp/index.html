@@ -1,0 +1,83 @@
+{% extends "electricbillapp/basetemplate.html" %}
+{% load static %}
+
+{% block title %}
+Homepage
+{% endblock %}
+{% block content %}
+<div style=" background: linear-gradient(to bottom, #ffffcc 3%, #ffffff 86%);
+">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <br>
+      <br>
+      <br>
+      <h1 style="text-align:center;">Welcome To</h1>
+    </div>
+    <div class="col">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width:100%; margin-left: auto; margin-right: auto;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'electricbillapp/welcome.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'electricbillapp/electricianworking.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item active">
+      <img src="{% static 'electricbillapp/waving.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </div>
+    <div class="col">
+      <br>
+      <br>
+      <br>
+      <h1 style="text-align:center;">Electrical Billing!</h1>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+<h3 style="text-align:center;">Our Mission</h3>
+<p style="text-align:center;">Here at Electric Billing our mission is to make paying electric bills easier for everyone, with our cutting technology of being able to register your own house</p>
+<p style="text-align:center;">with only a few clicks of a button and then us supplying you monthly electric bills, we are helping people all around the GTA as COVID 19 continues to make paying bills difficult for people.</p>
+
+<div style="margin:auto; text-align:center;">
+<form action="{% url 'contactus' %}" >
+    <input type="submit" value="Talk to us!" class="btn btn-outline-dark"/>
+</form>
+</div>
+
+<hr>
+<br>
+<br>
+
+<h3 style="text-align : center;">Photos</h3>
+<p style="text-align : center;">Here are some useful photos that we have left for your disposal.</p>
+<div class="container">
+  <div class="row">
+    <div class="col order-last">
+      <img src="{% static 'electricbillapp/electricbillinfo1.png' %}">
+      <br>
+    </div>
+    <div class="col">
+      <img src="{% static 'electricbillapp/electricbillinfo2.png' %}">
+      <br>
+    </div>
+    <div class="col order-first">
+      <img src="{% static 'electricbillapp/electricbillinfo3.png' %}">
+    </div>
+  </div>
+</div>
+{% endblock %}

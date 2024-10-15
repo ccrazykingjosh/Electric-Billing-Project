@@ -1,0 +1,20 @@
+{% extends "electricbillapp/basetemplate.html" %}
+{% block title %}
+Register Your House
+{% endblock %}
+{% block content %}
+<br>
+<h2 style="text-align : center;">Register Your House</h2>
+<h6 style="text-align : center;">Here you can Register your house onto our registery, once registered we will manage your house bills and send you monthly bills.</h6>
+<br>
+<br>
+<form method="post" style="text-align : center;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+</form>
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

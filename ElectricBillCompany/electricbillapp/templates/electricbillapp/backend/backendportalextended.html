@@ -1,0 +1,15 @@
+{% extends "electricbillapp/basetemplate.html" %}
+{% load static %}
+{% block title %}
+Back End Portal Extension
+{% endblock %}
+{% block content %}
+<br>
+{% if valid == True %}
+<h2>Welcome Admin</h2>
+<a href="{% url 'backendindex' %}">Back End Index</a>
+{% else %}
+<h2>Incorrect details</h2>
+{% endif %}
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}
